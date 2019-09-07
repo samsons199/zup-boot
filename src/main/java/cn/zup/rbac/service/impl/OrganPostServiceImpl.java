@@ -278,7 +278,7 @@ import cn.zup.rbac.service.settings.ConfigSetting;
 	@Override
 	public String getMySubOrganIdsAll(int organId) {
 		//获取所有organ 放置map中
-		List<Organ> organList = getSubOrganList(organId);
+		List<Organ> organList = getSubOrganList(organId); //改为获取下一层单位
         Map<Integer,Integer> map = new HashMap<Integer,Integer>();
 		for (Organ organ : organList) {
 			if(organ.getParentOrganId()!=null)
